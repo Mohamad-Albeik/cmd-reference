@@ -19,13 +19,17 @@ A modern, offline-ready reference for Windows Command Prompt commands. Designed 
 
 Because this project uses `fetch()` to load the `data.json` file, it **cannot** be run by simply opening `index.html` in a browser due to CORS (Cross-Origin Resource Sharing) security policies.
 
-### Option 1: VS Code Live Server (Recommended)
+### Option 1: Running via link
+https://mohamad-albeik.github.io/Windows-CMD/
+
+### Option 2: VS Code Live Server (Recommended)
 1.  Open the project in VS Code.
 2.  Install the "Live Server" extension.
 3.  Right-click `index.html` and select **"Open with Live Server"**.
 
-### Option 2: Python Local Server
+### Option 3: Python Local Server
 If you have Python installed, run this in the project terminal:
 ```bash
 # Python 3
+
 python -m http.server 8000
