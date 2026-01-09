@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows CMD Cheat Sheet</title>
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ADB5'%3E%3Cpath d='M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,18H4V6H20V18M7.5,15L6,13.5L8.5,11L6,8.5L7.5,7L11.5,11L7.5,15M13,15H17V13H13V15Z'/%3E%3C/svg%3E">
+    
+    <meta name="description" content="A modern, offline-ready Windows CMD cheat sheet.">
+    <meta property="og:title" content="Windows CMD Cheat Sheet">
+    <meta property="og:type" content="website">    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle Light Mode">
+            <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,2L14.39,5.42C13.65,5.15 12.84,5 12,5C11.16,5 10.35,5.15 9.61,5.42L12,2M3.34,7L7.5,5.29C7.24,6.03 7.1,6.84 7.1,7.66L3.34,7M3.36,17L7.1,16.34C7.1,17.16 7.24,17.97 7.5,18.71L3.36,17M12,22L9.61,18.58C10.35,18.85 11.16,19 12,19C12.84,19 13.65,18.85 14.39,18.58L12,22M20.64,17L16.5,18.71C16.76,17.97 16.9,17.16 16.9,16.34L20.64,17M20.66,7L16.9,7.66C16.9,6.84 16.76,6.03 16.5,5.29L20.66,7Z" /></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" style="display:none"><path d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C6.93,8.39 8.26,12.33 11.5,14.23C13.75,15.55 16.5,15.8 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.33 6.19,9.53 6.03,6.69C3.14,10.22 3.91,15.39 7.73,18.35C11.55,21.31 16.79,20.5 19.31,17.97Z" /></svg>
+        </button>
+
+        <div class="logo-area">
+            <svg class="site-logo" viewBox="0 0 24 24">
+                <path d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,18H4V6H20V18M7.5,15L6,13.5L8.5,11L6,8.5L7.5,7L11.5,11L7.5,15M13,15H17V13H13V15Z" />
+            </svg>
+            <h1>CMD <span>Reference</span></h1>
+        </div>
+        <p>A modern, offline-ready reference for beginners and power users.</p>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" aria-label="Search commands" placeholder="Search commands...">
+            <span class="search-hint">Press /</span>
+        </div>
+
+        <div class="quick-tips">
+            <div class="tip-item">
+                <span class="tip-label">
+                    <svg style="width:14px;height:14px;fill:var(--accent)" viewBox="0 0 24 24"><path d="M5,20H19V4H5M19,2A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H19M11.5,11L7.5,7L6,8.5L8.5,11L6,13.5L7.5,15L11.5,11M13,15H17V13H13V15Z" /></svg>
+                    Launch
+                </span>
+                <span><kbd>Win</kbd> + <kbd>R</kbd> &rarr; type <code>cmd</code> &rarr; <kbd>Enter</kbd></span>
+            </div>
+            <div class="tip-item">
+                <span class="tip-label">
+                    <svg style="width:14px;height:14px;fill:var(--accent)" viewBox="0 0 24 24"><path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,11.95L7.5,7.44L8.91,6L12,9.1L15.09,6L16.5,7.44L12,11.95Z" /></svg>
+                    Run as Admin
+                </span>
+                <span>Search <code>cmd</code> &rarr; <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd></span>
+            </div>
+            <div class="tip-item">
+                <span class="tip-label">
+                    <svg style="width:14px;height:14px;fill:var(--accent)" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L11,7.5V16.5Z" /></svg>
+                    Auto-Complete
+                </span>
+                <span>Type partial command &rarr; Press <kbd>Tab</kbd></span>
+            </div>
+            <div class="tip-item">
+                <span class="tip-label">
+                    <svg style="width:14px;height:14px;fill:var(--accent)" viewBox="0 0 24 24"><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>
+                    Verified
+                </span>
+                <span style="color:var(--text-muted); font-size: 0.85rem;">Tested on Windows 10 & 11</span>
+            </div>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul id="navLinks"></ul>
+    </nav>
+
+    <main id="contentArea"></main>
+
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <footer>
+        &copy; 2026 CMD Reference. <br> All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
