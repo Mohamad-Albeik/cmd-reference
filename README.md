@@ -32,12 +32,10 @@ You can view the fully functional project live in your browser here:
 * **JSON:** Structured data storage for commands.
 
 ## 📂 Project Structure
-├── data.json # Contains all command data, icons, and examples ├── index.html # Main entry point ├── script.js # Logic for rendering, search, and theming ├── style.css # Styling and dark/light mode definitions └── header-bg.jpg # Background asset
-## 🤝 Contributing
 
-1.  Fork the repository.
-2.  Add a new command to `data.json` following the existing schema.
-3.  Open a Pull Request!
-
----
-&copy; 2026 CMD Reference.
+```text
+├── data.json       # Contains all command data, icons, and examples
+├── index.html      # Main entry point
+├── script.js       # Logic for rendering, search, and theming
+├── style.css       # Styling and dark/light mode definitions
+└── header-bg.jpg   # Background asset
