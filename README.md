@@ -1,4 +1,4 @@
-# Windows CMD Cheat Sheet
+# Windows CMD Sheet
 
 A modern, offline-ready reference for Windows Command Prompt commands. Designed for beginners and power users, featuring a responsive interface, dark mode, and instant search.
 
@@ -39,3 +39,4 @@ You can view the fully functional project live in your browser here:
 ├── script.js       # Logic for rendering, search, and theming
 ├── style.css       # Styling and dark/light mode definitions
 └── header-bg.jpg   # Background asset
+
