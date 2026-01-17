@@ -40,3 +40,14 @@ You can view the fully functional project live in your browser here: **[➡️ V
 ├── style.css       # Styling and dark/light mode definitions
 ├── header-bg.jpg   # Background asset
 └── README.md       # Project documentation
+
+## 📞 Contact
+
+Mohamad Malek Albeik
+
+- **LinkedIn:** linkedin.com/in/mohamad-malek-albeik
+- **Website:** mohamad-albeik.github.io/portfolio-website-main/
+
+---
+
+*This project was built with passion and continuous learning.*
