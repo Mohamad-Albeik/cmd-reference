@@ -36,7 +36,10 @@ You can view the fully functional project live in your browser here:
 ```text
 ├── data.json       # Contains all command data, icons, and examples
 ├── index.html      # Main entry point
-├── script.js       # Logic for rendering, search, and theming
+├── script.js       # Logic for rendering, search, theming, and interactions
 ├── style.css       # Styling and dark/light mode definitions
-└── header-bg.jpg   # Background asset
+├── header-bg.jpg   # Background asset
+└── README.md       # Project documentation
+
+
 
