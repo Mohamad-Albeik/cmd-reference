@@ -40,12 +40,3 @@ You can view the fully functional project live in your browser here: **[➡️ V
 ├── style.css       # Styling and dark/light mode definitions
 ├── header-bg.jpg   # Background asset
 └── README.md       # Project documentation
-
-
-
-
-
-
-
-
-
