@@ -40,7 +40,7 @@ You can view the fully functional project live in your browser here: **[➡️ V
 ├── style.css       # Styling and dark/light mode definitions
 ├── header-bg.jpg   # Background asset
 └── README.md       # Project documentation
-#
+```
 ## 📞 Contact
 
 Mohamad Malek Albeik
@@ -51,4 +51,5 @@ Mohamad Malek Albeik
 ---
 
 *This project was built with passion and continuous learning.*
+
 
