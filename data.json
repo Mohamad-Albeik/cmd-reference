@@ -186,12 +186,13 @@
         "icon": "repair",
         "commands": [
             {
-                        "name": "winget upgrade",
+                "name": "winget upgrade",
                 "desc": "Lists and upgrades installed applications.",
                 "syntax": "winget upgrade [--all]",
                 "example": "winget upgrade --all",
                 "preview": "Name                            Id                       Version      Available\n---------------------------------------------------------------------------\nVisual Studio Code              Microsoft.VisualStudioCode 1.85.0       1.86.0\nPowerToys                       Microsoft.PowerToys      0.76.0       0.77.0",
-                "related": ["sfc"]
+                "related": ["sfc"],
+                "adminRequired": true
             },
             {
                 "name": "sfc",
@@ -321,3 +322,4 @@
     }
 
 ]
+
