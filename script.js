@@ -60,11 +60,11 @@ function createCommandCard(cmd) {
     if (cmd.dangerLevel === 'high') badgesHtml += `<span class="badge badge-danger"><svg style="width:10px;height:10px;fill:currentColor" viewBox="0 0 24 24">${ICONS.warning}</svg> Destructive</span>`;
     else if (cmd.dangerLevel === 'moderate') badgesHtml += `<span class="badge badge-danger"><svg style="width:10px;height:10px;fill:currentColor" viewBox="0 0 24 24">${ICONS.warning}</svg> Warning</span>`;
 
-    let notesHtml = cmd.notes ? `<div class="cmd-notes"><svg class="info-icon" viewBox="0 0 24 24">${ICONS.info}</svg><div><strong>Note:</strong> ${cmd.notes}</div></div>` : '';
+    let notesHtml = cmd.notes ? `<div class="cmd-notes"><svg class="info-icon" viewBox="0 0 24 24">${ICONS.info}</svg><div><strong>Note:</strong> ${escapeHtml(cmd.notes)}</div></div>` : '';
 
     let relatedHtml = '';
     if (cmd.related && cmd.related.length > 0) {
-        const links = cmd.related.map(r => `<button class="related-btn" onclick="triggerSearch('${r}')">${r}</button>`).join('');
+        const links = cmd.related.map(r => `<button class="related-btn" onclick="triggerSearch('${r}')">${escapeHtml(r)}</button>`).join('');
         relatedHtml = `<div class="related-cmds">See also: ${links}</div>`;
     }
 
@@ -97,7 +97,7 @@ function createCommandCard(cmd) {
                 <span class="cmd-name">${cmd.name}</span>
                 <div class="badge-container">${badgesHtml}</div>
             </div>
-            <p class="cmd-desc">${cmd.desc}</p>
+            <p class="cmd-desc">${escapeHtml(cmd.desc)}</p>
             ${notesHtml}
             
             <div class="code-container">
@@ -152,7 +152,7 @@ function renderContent(filterText = '') {
             section.innerHTML = `
                 <div class="category-header">
                     ${getIcon(cat.icon)}
-                    <h2 class="category-title">${cat.category}</h2>
+                    <h2 class="category-title">${escapeHtml(cat.category)}</h2>
                 </div>
                 ${commandsHtml}
             `;
