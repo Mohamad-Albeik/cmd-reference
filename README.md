@@ -45,11 +45,17 @@ You can view the fully functional project live in your browser here: **[➡️ V
 
 Mohamad Malek Albeik
 
-- **LinkedIn:** linkedin.com/in/mohamad-malek-albeik
-- **Website:** mohamad-albeik.github.io/portfolio-website-main/
+<p>
+<a href="https://linkedin.com/in/mohamad-malek-albeik" target="_blank">
+  <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+<a href="https://mohamad-albeik.github.io/portfolio-website-main/" target="_blank">
+  <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-333333?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+</p>
 
----
 
 *This project was built with passion and continuous learning.*
+
 
 
