@@ -5,8 +5,8 @@ A modern, offline-ready reference for Windows Command Prompt commands. Designed 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 #
-<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/6e1547c9-ad7f-4708-971c-1ac581abb369" />
-#
+#<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/6e1547c9-ad7f-4708-971c-1ac581abb369" />
+
 ## ✨ Features
 
 * **Dynamic Search:** Instantly filter commands by name, description, or keywords (debounced for performance).
@@ -42,6 +42,7 @@ You can view the fully functional project live in your browser here:
 ├── style.css       # Styling and dark/light mode definitions
 ├── header-bg.jpg   # Background asset
 └── README.md       # Project documentation
+
 
 
 
