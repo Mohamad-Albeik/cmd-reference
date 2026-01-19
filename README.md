@@ -41,6 +41,16 @@ You can view the fully functional project live in your browser here: **[➡️ V
 ├── header-bg.jpg   # Background asset
 └── README.md       # Project documentation
 ```
+## 💻 Technology
+
+This project is built with pure, simple web technologies—no frameworks, no libraries, no dependencies.
+
+<p>
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+</p>
+
 ## 📞 Contact
 
 Mohamad Malek Albeik
@@ -53,6 +63,7 @@ Mohamad Malek Albeik
   <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-333333?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 </p>
+
 
 
 *This project was built with passion and continuous learning.*
