@@ -5,7 +5,8 @@ A modern, offline-ready reference for Windows Command Prompt commands. Designed 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 #
-<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/6e1547c9-ad7f-4708-971c-1ac581abb369" />
+<img width="1303" height="877" alt="Screenshot 2026-02-28 005146" src="https://github.com/user-attachments/assets/567741ce-b68f-4b4e-8e82-fdcaae4fd380" />
+
 
 ## ✨ Features
 
@@ -67,6 +68,7 @@ Mohamad Malek Albeik
 
 
 *This project was built with passion and continuous learning.*
+
 
 
 
