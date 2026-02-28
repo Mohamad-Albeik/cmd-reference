@@ -1,325 +1,527 @@
-[
+﻿[
     {
-        "category": "Basic Commands",
-        "id": "basic",
-        "icon": "basic",
-        "commands": [
-            {
-                "name": "cls",
-                "desc": "Clears the command prompt screen.",
-                "syntax": "cls",
-                "example": "cls",
-                "preview": "C:\\>"
-            },
-            {
-                "name": "tree",
-                "desc": "Graphically displays the directory structure.",
-                "syntax": "tree [drive:][path] [/f]",
-                "example": "tree /f",
-                "preview": "Folder PATH listing for volume Windows\nVolume serial number is 00000000 0000:0000\nC:.\n├───Contacts\n├───Desktop\n│   └───Project\n├───Documents\n└───Downloads",
-                "related": ["dir"]
-            },
-            {
-                "name": "echo",
-                "desc": "Displays messages or turns command echoing on/off.",
-                "syntax": "echo [message]",
-                "example": "echo Hello World",
-                "preview": "Hello World",
-                "related": ["set"]
-            },
-            {
-                "name": "help",
-                "desc": "Provides help information for Windows commands.",
-                "syntax": "help [command]",
-                "example": "help dir",
-                "preview": "For more information on a specific command, type HELP command-name\nASSOC    Displays or modifies file extension associations.\nATTRIB   Displays or changes file attributes.\nBREAK    Sets or clears extended CTRL+C checking.\nCD       Displays the name of or changes the current directory.\nCLS      Clears the screen.\nCOPY     Copies one or more files to another location.\nDATE     Displays or sets the date.\nDEL      Deletes one or more files.",
-                "related": ["/?"]
-            }
-        ]
+        "category":  "Basic Commands",
+        "id":  "basic",
+        "icon":  "basic",
+        "commands":  [
+                         {
+                             "name":  "cls",
+                             "desc":  "Clears the command prompt screen.",
+                             "syntax":  "cls",
+                             "example":  "cls",
+                             "preview":  "C:\\\u003e"
+                         },
+                         {
+                             "name":  "tree",
+                             "desc":  "Graphically displays the directory structure.",
+                             "syntax":  "tree [drive:][path] [/f]",
+                             "example":  "tree /f",
+                             "preview":  "Folder PATH listing for volume Windows\nVolume serial number is 00000000 0000:0000\nC:.\nâ”œâ”€â”€â”€Contacts\nâ”œâ”€â”€â”€Desktop\nâ”‚   â””â”€â”€â”€Project\nâ”œâ”€â”€â”€Documents\nâ””â”€â”€â”€Downloads",
+                             "related":  [
+                                             "dir"
+                                         ]
+                         },
+                         {
+                             "name":  "echo",
+                             "desc":  "Displays messages or turns command echoing on/off.",
+                             "syntax":  "echo [message]",
+                             "example":  "echo Hello World",
+                             "preview":  "Hello World",
+                             "related":  [
+                                             "set"
+                                         ]
+                         },
+                         {
+                             "name":  "help",
+                             "desc":  "Provides help information for Windows commands.",
+                             "syntax":  "help [command]",
+                             "example":  "help dir",
+                             "preview":  "For more information on a specific command, type HELP command-name\nASSOC    Displays or modifies file extension associations.\nATTRIB   Displays or changes file attributes.\nBREAK    Sets or clears extended CTRL+C checking.\nCD       Displays the name of or changes the current directory.\nCLS      Clears the screen.\nCOPY     Copies one or more files to another location.\nDATE     Displays or sets the date.\nDEL      Deletes one or more files.",
+                             "related":  [
+                                             "/?"
+                                         ]
+                         }
+                     ]
     },
     {
-        "category": "File & Directory",
-        "id": "file-dir",
-        "icon": "files",
-        "commands": [
-            {
-                "name": "dir",
-                "desc": "Displays a list of files and subdirectories.",
-                "syntax": "dir [path] [/a] [/s]",
-                "example": "dir /s",
-                "preview": " Volume in drive C is Windows\n Directory of C:\\Users\\Name\n\n01/08/2026  10:00 AM    <DIR>          .\n01/08/2026  10:00 AM    <DIR>          ..\n01/08/2026  10:05 AM             1,024 file.txt\n               1 File(s)          1,024 bytes\n               2 Dir(s)  50,000,000,000 bytes free",
-                "related": ["cd", "tree", "attrib"]
-            },
-            {
-                "name": "cd",
-                "desc": "Changes the current directory.",
-                "syntax": "cd [/d] [path]",
-                "example": "cd C:\\Users\\Docs",
-                "preview": "C:\\Users\\Docs>",
-                "related": ["dir", "mkdir"]
-            },
-            {
-                "name": "mkdir",
-                "desc": "Creates a new directory (folder).",
-                "syntax": "mkdir [drive:]path",
-                "example": "mkdir new_folder",
-                "preview": "C:\\>mkdir new_folder\n\nC:\\>",
-                "related": ["rmdir"]
-            },
-            {
-                "name": "robocopy",
-                "desc": "Advanced utility to copy files and directory trees.",
-                "syntax": "robocopy <source> <dest> [options]",
-                "example": "robocopy C:\\src D:\\dst /E",
-                "preview": "------------------------------------------------------------------------------\n   ROBOCOPY     ::     Robust File Copy for Windows\n------------------------------------------------------------------------------\n  Started : Thursday, January 08, 2026 10:00:00 AM\n   Source : C:\\src\\\n     Dest : D:\\dst\\\n    Files : *.*\n  Options : *.* /DCOPY:DA /COPY:DAT /R:1000000 /W:30\n------------------------------------------------------------------------------\n       1    C:\\src\\\n100%        New File                 1024        file.txt\n------------------------------------------------------------------------------",
-                "notes": "Preferred over xcopy for reliability.",
-                "related": ["copy", "xcopy"]
-            },
-            {
-                "name": "del",
-                "desc": "Deletes one or more files.",
-                "syntax": "del [options] <filename>",
-                "example": "del *.txt",
-                "preview": "C:\\>del *.txt\n\nC:\\>",
-                "dangerLevel": "moderate",
-                "related": ["rmdir"]
-            }
-        ]
+        "category":  "File \u0026 Directory",
+        "id":  "file-dir",
+        "icon":  "files",
+        "commands":  [
+                         {
+                             "name":  "dir",
+                             "desc":  "Displays a list of files and subdirectories.",
+                             "syntax":  "dir [path] [/a] [/s]",
+                             "example":  "dir /s",
+                             "preview":  " Volume in drive C is Windows\n Directory of C:\\Users\\Name\n\n01/08/2026  10:00 AM    \u003cDIR\u003e          .\n01/08/2026  10:00 AM    \u003cDIR\u003e          ..\n01/08/2026  10:05 AM             1,024 file.txt\n               1 File(s)          1,024 bytes\n               2 Dir(s)  50,000,000,000 bytes free",
+                             "related":  [
+                                             "cd",
+                                             "tree",
+                                             "attrib"
+                                         ]
+                         },
+                         {
+                             "name":  "cd",
+                             "desc":  "Changes the current directory.",
+                             "syntax":  "cd [/d] [path]",
+                             "example":  "cd C:\\Users\\Docs",
+                             "preview":  "C:\\Users\\Docs\u003e",
+                             "related":  [
+                                             "dir",
+                                             "mkdir"
+                                         ]
+                         },
+                         {
+                             "name":  "mkdir",
+                             "desc":  "Creates a new directory (folder).",
+                             "syntax":  "mkdir [drive:]path",
+                             "example":  "mkdir new_folder",
+                             "preview":  "C:\\\u003emkdir new_folder\n\nC:\\\u003e",
+                             "related":  [
+                                             "rmdir"
+                                         ]
+                         },
+                         {
+                             "name":  "robocopy",
+                             "desc":  "Advanced utility to copy files and directory trees.",
+                             "syntax":  "robocopy \u003csource\u003e \u003cdest\u003e [options]",
+                             "example":  "robocopy C:\\src D:\\dst /E",
+                             "preview":  "------------------------------------------------------------------------------\n   ROBOCOPY     ::     Robust File Copy for Windows\n------------------------------------------------------------------------------\n  Started : Thursday, January 08, 2026 10:00:00 AM\n   Source : C:\\src\\\n     Dest : D:\\dst\\\n    Files : *.*\n  Options : *.* /DCOPY:DA /COPY:DAT /R:1000000 /W:30\n------------------------------------------------------------------------------\n       1    C:\\src\\\n100%        New File                 1024        file.txt\n------------------------------------------------------------------------------",
+                             "notes":  "Preferred over xcopy for reliability.",
+                             "related":  [
+                                             "copy",
+                                             "xcopy"
+                                         ]
+                         },
+                         {
+                             "name":  "del",
+                             "desc":  "Deletes one or more files.",
+                             "syntax":  "del [options] \u003cfilename\u003e",
+                             "example":  "del *.txt",
+                             "preview":  "C:\\\u003edel *.txt\n\nC:\\\u003e",
+                             "dangerLevel":  "moderate",
+                             "related":  [
+                                             "rmdir"
+                                         ]
+                         }
+                     ]
     },
     {
-        "category": "System Info",
-        "id": "sys-info",
-        "icon": "system",
-        "commands": [
-            {
-                "name": "systeminfo",
-                "desc": "Displays detailed configuration information.",
-                "syntax": "systeminfo",
-                "example": "systeminfo",
-                "preview": "Host Name:                 DESKTOP-123456\nOS Name:                   Microsoft Windows 10 Pro\nOS Version:                10.0.19045 N/A Build 19045\nOS Manufacturer:           Microsoft Corporation\nOS Configuration:          Standalone Workstation\nOS Build Type:             Multiprocessor Free\nRegistered Owner:          User\nSystem Type:               x64-based PC",
-                "related": ["ver"]
-            },
-            {
-                "name": "tasklist",
-                "desc": "Displays a list of currently running processes.",
-                "syntax": "tasklist",
-                "example": "tasklist",
-                "preview": "Image Name                     PID Session Name        Mem Usage\n========================= ======== ================ ============\nSystem Idle Process              0 Services                   8 K\nSystem                           4 Services                 120 K\nsvchost.exe                    956 Services               5,600 K\nchrome.exe                    4520 Console              150,240 K",
-                "related": ["taskkill"]
-            },
-            {
-                "name": "shutdown",
-                "desc": "Shuts down or restarts computer.",
-                "syntax": "shutdown /s /t 0",
-                "example": "shutdown /r /t 0",
-                "preview": "C:\\>",
-                "dangerLevel": "moderate"
-            }
-        ]
+        "category":  "System Info",
+        "id":  "sys-info",
+        "icon":  "system",
+        "commands":  [
+                         {
+                             "name":  "systeminfo",
+                             "desc":  "Displays detailed configuration information.",
+                             "syntax":  "systeminfo",
+                             "example":  "systeminfo",
+                             "preview":  "Host Name:                 DESKTOP-123456\nOS Name:                   Microsoft Windows 10 Pro\nOS Version:                10.0.19045 N/A Build 19045\nOS Manufacturer:           Microsoft Corporation\nOS Configuration:          Standalone Workstation\nOS Build Type:             Multiprocessor Free\nRegistered Owner:          User\nSystem Type:               x64-based PC",
+                             "related":  [
+                                             "ver"
+                                         ]
+                         },
+                         {
+                             "name":  "tasklist",
+                             "desc":  "Displays a list of currently running processes.",
+                             "syntax":  "tasklist",
+                             "example":  "tasklist",
+                             "preview":  "Image Name                     PID Session Name        Mem Usage\n========================= ======== ================ ============\nSystem Idle Process              0 Services                   8 K\nSystem                           4 Services                 120 K\nsvchost.exe                    956 Services               5,600 K\nchrome.exe                    4520 Console              150,240 K",
+                             "related":  [
+                                             "taskkill"
+                                         ]
+                         },
+                         {
+                             "name":  "shutdown",
+                             "desc":  "Shuts down or restarts computer.",
+                             "syntax":  "shutdown /s /t 0",
+                             "example":  "shutdown /r /t 0",
+                             "preview":  "C:\\\u003e",
+                             "dangerLevel":  "moderate"
+                         }
+                     ]
     },
     {
-        "category": "Network",
-        "id": "network",
-        "icon": "network",
-        "commands": [
-            {
-                "name": "ipconfig",
-                "desc": "Displays all current TCP/IP network configuration.",
-                "syntax": "ipconfig [/all]",
-                "example": "ipconfig /all",
-                "preview": "Windows IP Configuration\n\nEthernet adapter Ethernet:\n\n   Connection-specific DNS Suffix  . : localdomain\n   IPv4 Address. . . . . . . . . . . : 192.168.1.105\n   Subnet Mask . . . . . . . . . . . : 255.255.255.0\n   Default Gateway . . . . . . . . . : 192.168.1.1",
-                "related": ["ping", "netstat", "nslookup"]
-            },
-            {
-                "name": "ping",
-                "desc": "Verifies IP-level connectivity.",
-                "syntax": "ping <target>",
-                "example": "ping google.com",
-                "preview": "Pinging google.com [8.8.8.8] with 32 bytes of data:\nReply from 8.8.8.8: bytes=32 time=14ms TTL=117\nReply from 8.8.8.8: bytes=32 time=15ms TTL=117\nReply from 8.8.8.8: bytes=32 time=16ms TTL=117\nReply from 8.8.8.8: bytes=32 time=14ms TTL=117",
-                "related": ["tracert", "ipconfig"]
-            },
-            {
-                "name": "netstat",
-                "desc": "Displays active TCP connections.",
-                "syntax": "netstat [-a] [-n]",
-                "example": "netstat -an",
-                "preview": "Active Connections\n\n  Proto  Local Address          Foreign Address        State\n  TCP    192.168.1.5:49152      1.1.1.1:443            ESTABLISHED\n  TCP    192.168.1.5:49153      142.250.180.14:443     TIME_WAIT",
-                "related": ["ipconfig"]
-            }
-        ]
+        "category":  "Network",
+        "id":  "network",
+        "icon":  "network",
+        "commands":  [
+                         {
+                             "name":  "ipconfig",
+                             "desc":  "Displays all current TCP/IP network configuration.",
+                             "syntax":  "ipconfig [/all]",
+                             "example":  "ipconfig /all",
+                             "preview":  "Windows IP Configuration\n\nEthernet adapter Ethernet:\n\n   Connection-specific DNS Suffix  . : localdomain\n   IPv4 Address. . . . . . . . . . . : 192.168.1.105\n   Subnet Mask . . . . . . . . . . . : 255.255.255.0\n   Default Gateway . . . . . . . . . : 192.168.1.1",
+                             "related":  [
+                                             "ping",
+                                             "netstat",
+                                             "nslookup"
+                                         ]
+                         },
+                         {
+                             "name":  "ping",
+                             "desc":  "Verifies IP-level connectivity.",
+                             "syntax":  "ping \u003ctarget\u003e",
+                             "example":  "ping google.com",
+                             "preview":  "Pinging google.com [8.8.8.8] with 32 bytes of data:\nReply from 8.8.8.8: bytes=32 time=14ms TTL=117\nReply from 8.8.8.8: bytes=32 time=15ms TTL=117\nReply from 8.8.8.8: bytes=32 time=16ms TTL=117\nReply from 8.8.8.8: bytes=32 time=14ms TTL=117",
+                             "related":  [
+                                             "tracert",
+                                             "ipconfig"
+                                         ]
+                         },
+                         {
+                             "name":  "netstat",
+                             "desc":  "Displays active TCP connections.",
+                             "syntax":  "netstat [-a] [-n]",
+                             "example":  "netstat -an",
+                             "preview":  "Active Connections\n\n  Proto  Local Address          Foreign Address        State\n  TCP    192.168.1.5:49152      1.1.1.1:443            ESTABLISHED\n  TCP    192.168.1.5:49153      142.250.180.14:443     TIME_WAIT",
+                             "related":  [
+                                             "ipconfig"
+                                         ]
+                         },
+                         {
+                             "name":  "ipconfig /all",
+                             "desc":  "Detailed IP configuration for all adapters.",
+                             "syntax":  "ipconfig /all",
+                             "example":  "ipconfig /all",
+                             "preview":  "Windows IP Configuration\n\nHost Name . . . . . . . . . . . . : DESKTOP-123456\nPrimary Dns Suffix  . . . . . . . : localdomain\nEthernet adapter Ethernet:\n   Description . . . . . . . . . . : Intel(R) Ethernet\n   Physical Address. . . . . . . . : 00-11-22-33-44-55",
+                             "related":  [
+                                             "ipconfig",
+                                             "getmac"
+                                         ]
+                         },
+                         {
+                             "name":  "ipconfig /release",
+                             "desc":  "Release the current IPv4 address (DHCP).",
+                             "syntax":  "ipconfig /release",
+                             "example":  "ipconfig /release",
+                             "preview":  "Windows IP Configuration\n\nEthernet adapter Ethernet:\n   IPv4 Address. . . . . . . . . . . : 0.0.0.0",
+                             "notes":  "Requires a DHCP-enabled adapter.",
+                             "related":  [
+                                             "ipconfig /renew"
+                                         ]
+                         },
+                         {
+                             "name":  "ipconfig /renew",
+                             "desc":  "Renew the IPv4 address from DHCP.",
+                             "syntax":  "ipconfig /renew",
+                             "example":  "ipconfig /renew",
+                             "preview":  "Windows IP Configuration\n\nEthernet adapter Ethernet:\n   IPv4 Address. . . . . . . . . . . : 192.168.1.105",
+                             "notes":  "Requires a DHCP-enabled adapter.",
+                             "related":  [
+                                             "ipconfig /release"
+                                         ]
+                         },
+                         {
+                             "name":  "ipconfig /flushdns",
+                             "desc":  "Clear the DNS resolver cache.",
+                             "syntax":  "ipconfig /flushdns",
+                             "example":  "ipconfig /flushdns",
+                             "preview":  "Windows IP Configuration\n\nSuccessfully flushed the DNS Resolver Cache.",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "nslookup"
+                                         ]
+                         },
+                         {
+                             "name":  "nslookup",
+                             "desc":  "Query DNS details for a domain.",
+                             "syntax":  "nslookup \u003cname\u003e",
+                             "example":  "nslookup example.com",
+                             "preview":  "Server:  dns.local\nAddress:  192.168.1.1\n\nNon-authoritative answer:\nName:    example.com\nAddress: 93.184.216.34",
+                             "related":  [
+                                             "ipconfig /flushdns",
+                                             "ping"
+                                         ]
+                         },
+                         {
+                             "name":  "tracert",
+                             "desc":  "Trace the route to a destination.",
+                             "syntax":  "tracert \u003ctarget\u003e",
+                             "example":  "tracert 8.8.8.8",
+                             "preview":  "Tracing route to dns.google [8.8.8.8]\n  1    \u003c1 ms    \u003c1 ms    \u003c1 ms  192.168.1.1\n  2     7 ms     6 ms     8 ms  10.0.0.1",
+                             "related":  [
+                                             "pathping",
+                                             "ping"
+                                         ]
+                         },
+                         {
+                             "name":  "pathping",
+                             "desc":  "Advanced route and packet loss analysis.",
+                             "syntax":  "pathping \u003ctarget\u003e",
+                             "example":  "pathping 8.8.8.8",
+                             "preview":  "Computing statistics for 100 seconds...\n\nSource to Here   This Node/Link\nHop  RTT    Lost/Sent = Pct  Lost/Sent = Pct  Address",
+                             "related":  [
+                                             "tracert"
+                                         ]
+                         },
+                         {
+                             "name":  "netstat -an",
+                             "desc":  "View active network connections and ports.",
+                             "syntax":  "netstat -an",
+                             "example":  "netstat -an",
+                             "preview":  "Active Connections\n\n  Proto  Local Address          Foreign Address        State\n  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING",
+                             "related":  [
+                                             "ipconfig",
+                                             "getmac"
+                                         ]
+                         },
+                         {
+                             "name":  "arp -a",
+                             "desc":  "Display the ARP cache.",
+                             "syntax":  "arp -a",
+                             "example":  "arp -a",
+                             "preview":  "Interface: 192.168.1.105 --- 0x12\n  Internet Address      Physical Address      Type\n  192.168.1.1           00-11-22-33-44-55     dynamic",
+                             "related":  [
+                                             "getmac"
+                                         ]
+                         },
+                         {
+                             "name":  "getmac",
+                             "desc":  "Show MAC addresses.",
+                             "syntax":  "getmac [/v]",
+                             "example":  "getmac /v",
+                             "preview":  "Connection Name  Network Adapter          Physical Address    Transport Name\nEthernet         Intel(R) Ethernet        00-11-22-33-44-55   \\\\Device\\\\Tcpip_{GUID}",
+                             "related":  [
+                                             "ipconfig /all"
+                                         ]
+                         },
+                         {
+                             "name":  "hostname",
+                             "desc":  "Display the computer name.",
+                             "syntax":  "hostname",
+                             "example":  "hostname",
+                             "preview":  "DESKTOP-123456",
+                             "related":  [
+                                             "ipconfig /all"
+                                         ]
+                         },
+                         {
+                             "name":  "net use",
+                             "desc":  "Connect to or manage shared resources.",
+                             "syntax":  "net use [\\\\\\\\server\\\\share] [password] [/user:domain\\\\user]",
+                             "example":  "net use \\\\NAS\\\\Public /user:NAS\\\\admin",
+                             "preview":  "The command completed successfully.",
+                             "related":  [
+                                             "net share"
+                                         ]
+                         },
+                         {
+                             "name":  "net share",
+                             "desc":  "List shared resources on the local machine.",
+                             "syntax":  "net share",
+                             "example":  "net share",
+                             "preview":  "Share name   Resource                        Remark\n-------------------------------------------------------------------------------\nC$           C:\\\\                             Default share",
+                             "related":  [
+                                             "net use"
+                                         ]
+                         }
+                     ]
     },
     {
-        "category": "Batch Scripting",
-        "id": "batch",
-        "icon": "batch",
-        "commands": [
-            {
-                "name": "set",
-                "desc": "Displays or sets environment variables.",
-                "syntax": "set VAR=value",
-                "example": "set PATH=%PATH%;C:\\tools",
-                "preview": "ALLUSERSPROFILE=C:\\ProgramData\nAPPDATA=C:\\Users\\User\\AppData\\Roaming\nCommonProgramFiles=C:\\Program Files\\Common Files\nCOMPUTERNAME=DESKTOP-PC\nComSpec=C:\\WINDOWS\\system32\\cmd.exe\nPath=C:\\Windows\\system32;C:\\Windows;C:\\Program Files\\...",
-                "related": ["echo"]
-            },
-            {
-                "name": "if",
-                "desc": "Conditional processing.",
-                "syntax": "if exist <file> <cmd>",
-                "example": "if exist log.txt echo Found",
-                "preview": "C:\\>if exist log.txt echo Found\nFound",
-                "related": ["for", "goto"]
-            },
-            {
-                "name": "for",
-                "desc": "Loop command.",
-                "syntax": "for %%v in (set) do <cmd>",
-                "example": "for %%f in (*.txt) do echo %%f",
-                "preview": "C:\\>for %f in (*.txt) do echo %f\n\nC:\\>echo note.txt\nnote.txt\n\nC:\\>echo list.txt\nlist.txt",
-                "notes": "Use %%v in batch files, %v in CMD.",
-                "related": ["if"]
-            }
-        ]
+        "category":  "Batch Scripting",
+        "id":  "batch",
+        "icon":  "batch",
+        "commands":  [
+                         {
+                             "name":  "set",
+                             "desc":  "Displays or sets environment variables.",
+                             "syntax":  "set VAR=value",
+                             "example":  "set PATH=%PATH%;C:\\tools",
+                             "preview":  "ALLUSERSPROFILE=C:\\ProgramData\nAPPDATA=C:\\Users\\User\\AppData\\Roaming\nCommonProgramFiles=C:\\Program Files\\Common Files\nCOMPUTERNAME=DESKTOP-PC\nComSpec=C:\\WINDOWS\\system32\\cmd.exe\nPath=C:\\Windows\\system32;C:\\Windows;C:\\Program Files\\...",
+                             "related":  [
+                                             "echo"
+                                         ]
+                         },
+                         {
+                             "name":  "if",
+                             "desc":  "Conditional processing.",
+                             "syntax":  "if exist \u003cfile\u003e \u003ccmd\u003e",
+                             "example":  "if exist log.txt echo Found",
+                             "preview":  "C:\\\u003eif exist log.txt echo Found\nFound",
+                             "related":  [
+                                             "for",
+                                             "goto"
+                                         ]
+                         },
+                         {
+                             "name":  "for",
+                             "desc":  "Loop command.",
+                             "syntax":  "for %%v in (set) do \u003ccmd\u003e",
+                             "example":  "for %%f in (*.txt) do echo %%f",
+                             "preview":  "C:\\\u003efor %f in (*.txt) do echo %f\n\nC:\\\u003eecho note.txt\nnote.txt\n\nC:\\\u003eecho list.txt\nlist.txt",
+                             "notes":  "Use %%v in batch files, %v in CMD.",
+                             "related":  [
+                                             "if"
+                                         ]
+                         }
+                     ]
     },
     {
-        "category": "Maintenance",
-        "id": "maint-repair",
-        "icon": "repair",
-        "commands": [
-            {
-                "name": "winget upgrade",
-                "desc": "Lists and upgrades installed applications.",
-                "syntax": "winget upgrade [--all]",
-                "example": "winget upgrade --all",
-                "preview": "Name                            Id                       Version      Available\n---------------------------------------------------------------------------\nVisual Studio Code              Microsoft.VisualStudioCode 1.85.0       1.86.0\nPowerToys                       Microsoft.PowerToys      0.76.0       0.77.0",
-                "related": ["sfc"],
-                "adminRequired": true
-            },
-            {
-                "name": "sfc",
-                "desc": "Scans system files for errors and fixes them using a cached copy.",
-                "syntax": "sfc /scannow",
-                "example": "sfc /scannow",
-                "preview": "Beginning system scan.  This process will take some time.\n\nBeginning verification phase of system scan.\nVerification 100% complete.\n\nWindows Resource Protection did not find any integrity violations.",
-                "adminRequired": true,
-                "related": ["dism", "chkdsk"]
-            },
-            {
-                "name": "dism",
-                "desc": "Replaces faulty system files to fix the Windows image.",
-                "syntax": "dism /online /cleanup-image /restorehealth",
-                "example": "dism /online /cleanup-image /restorehealth",
-                "preview": "Deployment Image Servicing and Management tool\nVersion: 10.0.19041.844\n\nImage Version: 10.0.19041.844\n\n[==========================100.0%==========================]\nThe restore operation completed successfully.\nThe operation completed successfully.",
-                "adminRequired": true,
-                "related": ["sfc"]
-            },
-            {
-                "name": "netsh winsock reset",
-                "desc": "Assists in fixing network connectivity issues by clearing the Winsock Catalog.",
-                "syntax": "netsh winsock reset",
-                "example": "netsh winsock reset",
-                "preview": "Successfully reset the Winsock Catalog.\nYou must restart the computer in order to complete the reset.",
-                "adminRequired": true,
-                "related": ["ipconfig"]
-            },
-            {
-                "name": "chkdsk",
-                "desc": "Checks and repairs hard drive errors.",
-                "syntax": "chkdsk <volume> /f /r",
-                "example": "chkdsk C: /f /r",
-                "preview": "The type of the file system is NTFS.\nVolume label is Windows.\n\nStage 1: Examining basic file system structure...\n  256000 file records processed.\nFile verification completed.\n\nStage 2: Examining file name linkage...\n  300000 index entries processed.\nIndex verification completed.",
-                "adminRequired": true,
-                "notes": "Requires a restart if used on the C: drive.",
-                "related": ["sfc", "defrag"]
-            },
-            {
-                "name": "defrag",
-                "desc": "Optimizes the file system to improve access speed and performance.",
-                "syntax": "defrag <volume> /O",
-                "example": "defrag C: /O",
-                "preview": "Microsoft Drive Optimizer\nCopyright (c) 2013 Microsoft Corp.\n\nInvoking retrim on (C:)...\n\nThe operation completed successfully.\n\nPost Defragmentation Report:\n    Volume Information:\n        Volume size                 = 930.89 GB\n        Free space                  = 450.55 GB\n        Total fragmented space      = 0%",
-                "adminRequired": true
-            },
-            {
-                "name": "net stop bits",
-                "desc": "Stops the Background Intelligent Transfer Service. Useful for troubleshooting stuck updates.",
-                "syntax": "net stop bits",
-                "example": "net stop bits",
-                "preview": "The Background Intelligent Transfer Service service is stopping.\nThe Background Intelligent Transfer Service service was stopped successfully.",
-                "adminRequired": true,
-                "related": ["net stop wuauserv"]
-            },
-            {
-                "name": "net stop wuauserv",
-                "desc": "Stops the Windows Update service. Useful for restarting the update process.",
-                "syntax": "net stop wuauserv",
-                "example": "net stop wuauserv",
-                "preview": "The Windows Update service is stopping.\nThe Windows Update service was stopped successfully.",
-                "adminRequired": true,
-                "related": ["net stop bits"]
-            },
-            {
-                "name": "ipconfig /flushdns",
-                "desc": "Clears the DNS resolver cache to fix browsing issues.",
-                "syntax": "ipconfig /flushdns",
-                "example": "ipconfig /flushdns",
-                "preview": "Windows IP Configuration\n\nSuccessfully flushed the DNS Resolver Cache.",
-                "adminRequired": true,
-                "related": ["netsh winsock reset"]
-            },
-            {
-                "name": "driverquery",
-                "desc": "Displays a list of all installed device drivers and their properties.",
-                "syntax": "driverquery /v",
-                "example": "driverquery /v",
-                "preview": "Module Name  Display Name           Driver Type   Link Date\n============ ====================== ============= ======================\n1394ohci     1394 OHCI Compliant Ho Kernel        12/6/2019 12:00:00 AM\n3ware        3ware                  Kernel        12/6/2019 12:00:00 AM\nACPI         Microsoft ACPI Driver  Kernel        12/6/2019 12:00:00 AM",
-                "adminRequired": true,
-                "related": ["systeminfo"]
-            }
-        ]
+        "category":  "Maintenance",
+        "id":  "maint-repair",
+        "icon":  "repair",
+        "commands":  [
+                         {
+                             "name":  "winget upgrade",
+                             "desc":  "Lists and upgrades installed applications.",
+                             "syntax":  "winget upgrade [--all]",
+                             "example":  "winget upgrade --all",
+                             "preview":  "Name                            Id                       Version      Available\n---------------------------------------------------------------------------\nVisual Studio Code              Microsoft.VisualStudioCode 1.85.0       1.86.0\nPowerToys                       Microsoft.PowerToys      0.76.0       0.77.0",
+                             "related":  [
+                                             "sfc"
+                                         ],
+                             "adminRequired":  true
+                         },
+                         {
+                             "name":  "sfc",
+                             "desc":  "Scans system files for errors and fixes them using a cached copy.",
+                             "syntax":  "sfc /scannow",
+                             "example":  "sfc /scannow",
+                             "preview":  "Beginning system scan.  This process will take some time.\n\nBeginning verification phase of system scan.\nVerification 100% complete.\n\nWindows Resource Protection did not find any integrity violations.",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "dism",
+                                             "chkdsk"
+                                         ]
+                         },
+                         {
+                             "name":  "dism",
+                             "desc":  "Replaces faulty system files to fix the Windows image.",
+                             "syntax":  "dism /online /cleanup-image /restorehealth",
+                             "example":  "dism /online /cleanup-image /restorehealth",
+                             "preview":  "Deployment Image Servicing and Management tool\nVersion: 10.0.19041.844\n\nImage Version: 10.0.19041.844\n\n[==========================100.0%==========================]\nThe restore operation completed successfully.\nThe operation completed successfully.",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "sfc"
+                                         ]
+                         },
+                         {
+                             "name":  "netsh winsock reset",
+                             "desc":  "Assists in fixing network connectivity issues by clearing the Winsock Catalog.",
+                             "syntax":  "netsh winsock reset",
+                             "example":  "netsh winsock reset",
+                             "preview":  "Successfully reset the Winsock Catalog.\nYou must restart the computer in order to complete the reset.",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "ipconfig"
+                                         ]
+                         },
+                         {
+                             "name":  "chkdsk",
+                             "desc":  "Checks and repairs hard drive errors.",
+                             "syntax":  "chkdsk \u003cvolume\u003e /f /r",
+                             "example":  "chkdsk C: /f /r",
+                             "preview":  "The type of the file system is NTFS.\nVolume label is Windows.\n\nStage 1: Examining basic file system structure...\n  256000 file records processed.\nFile verification completed.\n\nStage 2: Examining file name linkage...\n  300000 index entries processed.\nIndex verification completed.",
+                             "adminRequired":  true,
+                             "notes":  "Requires a restart if used on the C: drive.",
+                             "related":  [
+                                             "sfc",
+                                             "defrag"
+                                         ]
+                         },
+                         {
+                             "name":  "defrag",
+                             "desc":  "Optimizes the file system to improve access speed and performance.",
+                             "syntax":  "defrag \u003cvolume\u003e /O",
+                             "example":  "defrag C: /O",
+                             "preview":  "Microsoft Drive Optimizer\nCopyright (c) 2013 Microsoft Corp.\n\nInvoking retrim on (C:)...\n\nThe operation completed successfully.\n\nPost Defragmentation Report:\n    Volume Information:\n        Volume size                 = 930.89 GB\n        Free space                  = 450.55 GB\n        Total fragmented space      = 0%",
+                             "adminRequired":  true
+                         },
+                         {
+                             "name":  "net stop bits",
+                             "desc":  "Stops the Background Intelligent Transfer Service. Useful for troubleshooting stuck updates.",
+                             "syntax":  "net stop bits",
+                             "example":  "net stop bits",
+                             "preview":  "The Background Intelligent Transfer Service service is stopping.\nThe Background Intelligent Transfer Service service was stopped successfully.",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "net stop wuauserv"
+                                         ]
+                         },
+                         {
+                             "name":  "net stop wuauserv",
+                             "desc":  "Stops the Windows Update service. Useful for restarting the update process.",
+                             "syntax":  "net stop wuauserv",
+                             "example":  "net stop wuauserv",
+                             "preview":  "The Windows Update service is stopping.\nThe Windows Update service was stopped successfully.",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "net stop bits"
+                                         ]
+                         },
+                         {
+                             "name":  "ipconfig /flushdns",
+                             "desc":  "Clears the DNS resolver cache to fix browsing issues.",
+                             "syntax":  "ipconfig /flushdns",
+                             "example":  "ipconfig /flushdns",
+                             "preview":  "Windows IP Configuration\n\nSuccessfully flushed the DNS Resolver Cache.",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "netsh winsock reset"
+                                         ]
+                         },
+                         {
+                             "name":  "driverquery",
+                             "desc":  "Displays a list of all installed device drivers and their properties.",
+                             "syntax":  "driverquery /v",
+                             "example":  "driverquery /v",
+                             "preview":  "Module Name  Display Name           Driver Type   Link Date\n============ ====================== ============= ======================\n1394ohci     1394 OHCI Compliant Ho Kernel        12/6/2019 12:00:00 AM\n3ware        3ware                  Kernel        12/6/2019 12:00:00 AM\nACPI         Microsoft ACPI Driver  Kernel        12/6/2019 12:00:00 AM",
+                             "adminRequired":  true,
+                             "related":  [
+                                             "systeminfo"
+                                         ]
+                         }
+                     ]
     },
     {
-        "category": "Users",
-        "id": "users",
-        "icon": "users",
-        "commands": [
-            {
-                "name": "net user",
-                "desc": "Manage user accounts.",
-                "syntax": "net user [user] [pass] /add",
-                "example": "net user John 1234 /add",
-                "preview": "User accounts for \\\\DESKTOP-PC\n\n-------------------------------------------------------------------------------\nAdministrator            DefaultAccount           Guest\nJohn                     WDAGUtilityAccount\nThe command completed successfully.",
-                "adminRequired": true,
-                "dangerLevel": "moderate",
-                "related": ["whoami"]
-            },
-            {
-                "name": "whoami",
-                "desc": "Displays current user info.",
-                "syntax": "whoami [/all]",
-                "example": "whoami",
-                "preview": "desktop-pc\\john",
-                "related": ["net user"]
-            }
-        ]
+        "category":  "Users",
+        "id":  "users",
+        "icon":  "users",
+        "commands":  [
+                         {
+                             "name":  "net user",
+                             "desc":  "Manage user accounts.",
+                             "syntax":  "net user [user] [pass] /add",
+                             "example":  "net user John 1234 /add",
+                             "preview":  "User accounts for \\\\DESKTOP-PC\n\n-------------------------------------------------------------------------------\nAdministrator            DefaultAccount           Guest\nJohn                     WDAGUtilityAccount\nThe command completed successfully.",
+                             "adminRequired":  true,
+                             "dangerLevel":  "moderate",
+                             "related":  [
+                                             "whoami"
+                                         ]
+                         },
+                         {
+                             "name":  "whoami",
+                             "desc":  "Displays current user info.",
+                             "syntax":  "whoami [/all]",
+                             "example":  "whoami",
+                             "preview":  "desktop-pc\\john",
+                             "related":  [
+                                             "net user"
+                                         ]
+                         }
+                     ]
     },
     {
-        "category": "Disk",
-        "id": "disk",
-        "icon": "disk",
-        "commands": [
-            {
-                "name": "format",
-                "desc": "Formats a disk.",
-                "syntax": "format <vol> /fs:ntfs",
-                "example": "format D: /fs:ntfs",
-                "preview": "The type of the file system is NTFS.\nEnter current volume label for drive D: DATA\n\nWARNING, ALL DATA ON NON-REMOVABLE DISK\nDRIVE D: WILL BE LOST!\nProceed with Format (Y/N)? y\nFormatting 5000.0 MB\nCreating file system structures.\nFormat complete.",
-                "dangerLevel": "high",
-                "adminRequired": true,
-                "notes": "Wipes all data. Check drive letter.",
-                "related": ["chkdsk"]
-            }
-        ]
+        "category":  "Disk",
+        "id":  "disk",
+        "icon":  "disk",
+        "commands":  [
+                         {
+                             "name":  "format",
+                             "desc":  "Formats a disk.",
+                             "syntax":  "format \u003cvol\u003e /fs:ntfs",
+                             "example":  "format D: /fs:ntfs",
+                             "preview":  "The type of the file system is NTFS.\nEnter current volume label for drive D: DATA\n\nWARNING, ALL DATA ON NON-REMOVABLE DISK\nDRIVE D: WILL BE LOST!\nProceed with Format (Y/N)? y\nFormatting 5000.0 MB\nCreating file system structures.\nFormat complete.",
+                             "dangerLevel":  "high",
+                             "adminRequired":  true,
+                             "notes":  "Wipes all data. Check drive letter.",
+                             "related":  [
+                                             "chkdsk"
+                                         ]
+                         }
+                     ]
     }
-
 ]
 
