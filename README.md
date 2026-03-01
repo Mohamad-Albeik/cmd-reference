@@ -21,7 +21,7 @@ A modern, offline-ready reference for Windows Command Prompt commands. Designed 
 
 ## 🚀 Live Demo
 
-You can view the fully functional project live in your browser here: **[➡️ View Live Demo](https://mohamad-albeik.github.io/Windows-CMD/)**
+You can view the fully functional project live in your browser here: **[➡️ View Live Demo](https://mohamad-albeik.github.io/cmd-reference/)**
 
 *(Note: If you clone this repository, you cannot simply double-click `index.html` to run it due to browser security settings. Please use the live link above unless you are setting up a local server.)*
 
@@ -68,6 +68,7 @@ Mohamad Malek Albeik
 
 
 *This project was built with passion and continuous learning.*
+
 
 
 
